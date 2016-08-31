@@ -34,7 +34,8 @@ defmodule Hound.Session do
   def make_capabilities(browser, opts \\ []) do
     browser = opts[:browser] || browser
     %{
-      javascriptEnabled: false,
+      javascriptEnabled: true,
+      handleAlerts: true,
       version: "",
       rotatable: false,
       takesScreenshot: true,
